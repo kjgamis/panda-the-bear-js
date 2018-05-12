@@ -54,42 +54,43 @@ document.querySelectorAll('.action-icon-bg').forEach( function(icon) { icon.styl
 
 8. Scroll down to the contact form. Change the placeholder attribute of the name field to "identify yourself".
 
-```
-
+``` Javascript
+document.querySelector('#name').placeholder = 'Identify Yourself';
 ```
 
 9. Change the placeholder attribute of the message field to "state your business".
 
-```
-
+``` Javascript
+document.querySelector('#message').placeholder = 'State your Business';
 ```
 
 10. Give the name field a "value" attribute of "your nemesis".
 
-```
-
+``` Javascript
+document.querySelector('#name').value = 'your nemesis';
 ```
 
 11. Change the value attribute of the email field to "koalathebear@gmail.com".
 
-```
-
+``` Javascript
+document.querySelector('#email').value = "koalathebear@gmail.com";
 ```
 
 12. Change the value of the submit button on the contact form to "En garde!".
 
-```
-
+``` Javascript
+document.querySelector('#submit').value = "En garde!";
 ```
 
 13. We should stop Koala from sending an email to Panda that they might regret! Find a way to disable the submit button (hint: familiarize yourself with the disabled attribute).
 
-```
-
+``` Javascript
+document.querySelector('#submit').disabled = true;
 ```
 
 14. We should help Panda protect their privacy by erasing their personal details from the sidebar.
 
-```
-
+``` Javascript
+var element = document.querySelector('ul');
+element.parentNode.removeChild(element);
 ```
