@@ -127,8 +127,24 @@ var clone = pikachu.cloneNode(true); document.querySelector('.portfolio-containe
 
 ``` Javascript
 var listItem = document.createElement('li');
+listItem.className = 'bio-info-item';
+
 var leftSpan = document.createElement('span');
+leftSpan.className = 'bio-info-title';
+
 var lastUpdated = document.createTextNode('Page last updated on');
 leftSpan.appendChild(lastUpdated);
 listItem.appendChild(leftSpan);
+
+var rightSpan = document.createElement('span');
+rightSpan.className = 'bio-info-value';
+rightSpan.classList.add('bio-info-date');
+
+var date = new Date();
+var todayDate = document.createTextNode(date);
+rightSpan.appendChild(todayDate);
+listItem.appendChild(rightSpan);
+
+var bioInfo = document.querySelector('.bio-info');
+bioInfo.appendChild(listItem);
 ```
